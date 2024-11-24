@@ -34,14 +34,17 @@ const startServer = async () => {
 
 const importarDados = async () => {
   try {
-   
-    await Hotel.sync({ force: true }); 
+    const [results, metadata] = await sequelize.query("SELECT COUNT(*) as count FROM Hotels");
+    
+    if (results[0].count > 0) {
+      console.log('Dados já foram importados. Ignorando a importação.');
+      return;
+    }
+
+    await Hotel.sync({ force: true });
     console.log('Tabela Hotels recriada com sucesso!');
 
-   
     const sql = fs.readFileSync(path.resolve('src', 'data', 'Hotels_202411222154.sql'), 'utf-8');
-
-    
     await sequelize.query(sql);
 
     console.log('Dados inseridos com sucesso!');
