@@ -1,6 +1,4 @@
-Aqui está a versão aprimorada do README com as rotas, descrições e informações sobre como usar a versão no **Render**:
 
----
 
 # 📚 Documentação da API de Categorização de Hotéis 🌍
 
