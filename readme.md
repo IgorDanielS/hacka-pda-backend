@@ -28,7 +28,6 @@ A **API de Categorização de Hotéis** tem como objetivo categorizar hotéis au
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/IgorDanielS/hacka-pda-backend
-   cd categorizacao-hoteis
    ```
 
 2. **Instale as dependências**:
