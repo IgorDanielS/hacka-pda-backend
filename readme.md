@@ -61,32 +61,32 @@ Se você preferir usar a API na versão hospedada pelo **Render**, siga os passo
 Aqui estão as principais rotas da API e o que elas fazem:
 
 ### **1. Criar um Hotel**
-- **URL**: `/hotels`
+- **URL**: `api/hotels`
 - **Método**: `POST`
 - **Descrição**: Cria um novo hotel no banco de dados com as informações fornecidas.
 
 ### **2. Atualizar um Hotel**
-- **URL**: `/hotels/:id`
+- **URL**: `api/hotels/:id`
 - **Método**: `PUT`
 - **Descrição**: Atualiza os dados de um hotel específico pelo seu `id`.
 
 ### **3. Obter Todos os Hotéis**
-- **URL**: `/hotels`
+- **URL**: `api/hotels`
 - **Método**: `GET`
 - **Descrição**: Retorna uma lista de todos os hotéis cadastrados no banco de dados.
 
 ### **4. Obter Hotéis por Categoria**
-- **URL**: `/hotels/category/:category`
+- **URL**: `api/hotels/category/:category`
 - **Método**: `GET`
 - **Descrição**: Retorna todos os hotéis pertencentes à categoria especificada (ex: "Resort", "Hotel Fazenda").
 
 ### **5. Obter Hotéis por Cidade**
-- **URL**: `/hotels/city/:city`
+- **URL**: `api/hotels/city/:city`
 - **Método**: `GET`
 - **Descrição**: Retorna todos os hotéis localizados na cidade especificada.
 
 ### **6. Obter Hotéis por Categoria e Cidade**
-- **URL**: `/hotels/category/:category/city/:city`
+- **URL**: `api/hotels/category/:category/city/:city`
 - **Método**: `GET`
 - **Descrição**: Retorna todos os hotéis de uma determinada categoria e cidade.
 
