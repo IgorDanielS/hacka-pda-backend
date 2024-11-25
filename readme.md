@@ -1,38 +1,96 @@
+Aqui está a versão aprimorada do README com as rotas, descrições e informações sobre como usar a versão no **Render**:
+
+---
+
 # 📚 Documentação da API de Categorização de Hotéis 🌍
 
 ## 🚀 Visão Geral
 
-Esta API tem como objetivo categorizar hotéis de forma automática, analisando suas descrições e nomes. Utiliza a biblioteca **string-similarity-js** para comparar as descrições com palavras-chave específicas de cada categoria e também integra uma **API de geolocalização** (Nominatim OpenStreetMap) para buscar a localização do hotel e definir a categoria mais adequada.
+A **API de Categorização de Hotéis** tem como objetivo categorizar hotéis automaticamente com base em suas descrições e nomes. Utilizando a biblioteca **string-similarity-js** para comparar palavras-chave e uma **API de Geolocalização** (Nominatim OpenStreetMap) para localizar o hotel, a API pode categorizar hotéis de forma eficiente e precisa.
+
+---
 
 ## 🔍 Funcionalidades
 
 1. **Categorização por Descrição** 📝:
-   - A API analisa a descrição do hotel e verifica a presença de palavras-chave relacionadas a uma categoria específica (ex: "luxo", "spa", "piscina" para "Resort").
-   - Se palavras-chave coincidirem, a categoria é atribuída diretamente ao hotel.
+   - Analisamos a descrição do hotel e verificamos a presença de palavras-chave específicas (ex: "luxo", "spa", "piscina") para categorizar o hotel automaticamente.
 
 2. **Categorização com Localização** 🌍:
-   - A API consulta o nome do hotel na **API de geolocalização Nominatim OpenStreetMap**.
-   - Se encontrar o hotel com base na localização, a categoria será automaticamente definida como **"Hotel"**.
+   - Consultamos a **API de Geolocalização Nominatim OpenStreetMap** para identificar o hotel e definir sua categoria automaticamente com base na localização.
 
-3. **Categorização Automática para Banco de Dados** 💾:
-   - A API percorre os dados de todos os hotéis no banco de dados e categoriza cada um de acordo com o nome e descrição, podendo **atualizar automaticamente a categoria no banco de dados**.
+3. **Categorização para Banco de Dados** 💾:
+   - A API percorre os hotéis no banco de dados e atualiza a categoria de cada um conforme os critérios definidos.
 
-## 🛠 Como Usar
+---
 
-### 📤 Entrada:
-- **Nome do Hotel** (ex: "Hotel Luxo Spa")
-- **Descrição do Hotel** (ex: "Um hotel 5 estrelas com spa e piscina")
+## 📦 Instalação
 
-### 🏷️ Saída:
-- Categoria do Hotel: **Resort**, **Hotel Fazenda**, **Hostel**, **Pousada**, **Hotel**, etc.
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/IgorDanielS/hacka-pda-backend
+   ```
 
-### 🎯 Objetivo:
-- Organizar e categorizar automaticamente hotéis em seu banco de dados, facilitando a busca e o gerenciamento.
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
 
-## 🔄 Como Funciona
+3. **Inicie o servidor localmente**:
+   ```bash
+   npm run dev
+   ```
 
-1. **Busca de Categoria por Descrição**:
-   - A API verifica se o nome ou a descrição do hotel contém palavras-chave que correspondem a uma das categorias definidas (como **Resort** ou **Hotel Fazenda**). Exemplo: "luxo", "spa", "fazenda", entre outros. Se a busca por localização não encontrar resultados, a API faz uma comparação de similaridade entre a descrição do hotel e as palavras-chave de cada categoria. O algoritmo da lib **string-similarity** ajuda a calcular a correspondência mais próxima.
+4. **Se necessario execute o index.js para transformar as categorias dos dados**:
 
-2. **Busca por Localização**:
-   - A API usa o nome do hotel para consultar a **API de Geolocalização Nominatim OpenStreetMap**. Se a localização for encontrada, o hotel é automaticamente classificado como **"Hotel"**.
+
+
+
+   O servidor estará disponível em [http://localhost:3000/api](http://localhost:3000/api).
+
+---
+
+## 🚀 Como Usar na Versão Render
+
+Se você preferir usar a API na versão hospedada pelo **Render**, siga os passos abaixo:
+
+1. Acesse o link da versão hospedada em [https://hacka-pda-backend.onrender.com/api](https://hacka-pda-backend.onrender.com/api).
+2. Você pode usar a API diretamente no ambiente de produção.
+
+---
+
+## 🛠️ Rotas da API
+
+Aqui estão as principais rotas da API e o que elas fazem:
+
+### **1. Criar um Hotel**
+- **URL**: `/hotels`
+- **Método**: `POST`
+- **Descrição**: Cria um novo hotel no banco de dados com as informações fornecidas.
+
+### **2. Atualizar um Hotel**
+- **URL**: `/hotels/:id`
+- **Método**: `PUT`
+- **Descrição**: Atualiza os dados de um hotel específico pelo seu `id`.
+
+### **3. Obter Todos os Hotéis**
+- **URL**: `/hotels`
+- **Método**: `GET`
+- **Descrição**: Retorna uma lista de todos os hotéis cadastrados no banco de dados.
+
+### **4. Obter Hotéis por Categoria**
+- **URL**: `/hotels/category/:category`
+- **Método**: `GET`
+- **Descrição**: Retorna todos os hotéis pertencentes à categoria especificada (ex: "Resort", "Hotel Fazenda").
+
+### **5. Obter Hotéis por Cidade**
+- **URL**: `/hotels/city/:city`
+- **Método**: `GET`
+- **Descrição**: Retorna todos os hotéis localizados na cidade especificada.
+
+### **6. Obter Hotéis por Categoria e Cidade**
+- **URL**: `/hotels/category/:category/city/:city`
+- **Método**: `GET`
+- **Descrição**: Retorna todos os hotéis de uma determinada categoria e cidade.
+
+---
+
