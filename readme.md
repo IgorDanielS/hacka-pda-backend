@@ -93,13 +93,13 @@ Aqui estão as principais rotas da API e o que elas fazem:
 - **Descrição**: Retorna todos os hotéis de uma determinada categoria e cidade.
 
 ### Documentação
-[PDF](https://drive.google.com/file/d/16uz35_APMNimoXta61YOawl2B6T22eu8/view?usp=drive_link).
+[PDF](https://drive.google.com/file/d/16uz35_APMNimoXta61YOawl2B6T22eu8/view?usp=drive_link)
 
 ### Pitch de Apresentação
-[Slides](https://www.canva.com/design/DAGXbShGHak/mwyY5zFIrDnfTNUDXTfnaw/edit?utm_content=DAGXbShGHak&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
+[Slides](https://www.canva.com/design/DAGXbShGHak/mwyY5zFIrDnfTNUDXTfnaw/edit?utm_content=DAGXbShGHak&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ### Front-end
-[Front-end](https://github.com/Monteiro-Let/Hackathon_Onfly).
+[Front-end](https://github.com/Monteiro-Let/Hackathon_Onfly)
 
 
 ---
