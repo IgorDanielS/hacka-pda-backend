@@ -67,3 +67,19 @@ export const getAllHotelsByCategoryAndCity = async (req, res) => {
         return res.status(500).json({ message: 'Erro ao buscar hotéis', error });
     }
 };
+
+export const deleteHotelById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const hotel = await Hotel.destroy({ where: { id } });
+
+        if (!hotel) {
+            return res.status(404).json({ message: 'Hotel não encontrado' });
+        }
+
+        return res.status(200).json({ message: 'Hotel deletado com sucesso' });
+    } catch (error) {
+        return res.status(500).json({ message: 'Erro ao deletar hotel', error });
+    }
+};
+
