@@ -92,7 +92,7 @@ Aqui estão as principais rotas da API e o que elas fazem:
 - **Método**: `GET`
 - **Descrição**: Retorna todos os hotéis de uma determinada categoria e cidade.
 
-- ### Documentação
+### Documentação
 [PDF](https://drive.google.com/file/d/16uz35_APMNimoXta61YOawl2B6T22eu8/view?usp=drive_link).
 
 ### Pitch de Apresentação
